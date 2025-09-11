@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    <h1>Usuários Cadastrados</h1>
+    {% for usuario in pessoas %}
+    <ul>
+        <li>{{ usuario.nome }} </li>
+        <li>{{ usuario.idade }}</li>
+        <li>{{ usuario.email }}</li>
+        <a href="{% url 'deletar_pessoa' usuario.id %}">Deletar</a>
+        <a href="{% url 'atualizar_pessoas' usuario.id %}">Atualizar</a>
+    </ul>
+    {% endfor %}
+    <a href="{% url 'criar_pessoa' %}">Cadastrar Novo Usuário</a>   
+</body>
+</html>
