@@ -15,6 +15,9 @@
             {{ cachorro.instagram }}
         </li>
     </ul>
+    <a href="{% url 'atualizar_cachorro' cachorro.id %}">Atualizar Cachorro</a>
+    <a href="{% url 'deletar_cachorro' cachorro.id %}">Deletar Cachorro</a>
     {% endfor %}
+    <a href="{% url 'criar_cachorro' %}">Criar Cachorro</a>
 </body>
 </html>
